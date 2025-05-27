@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ваучер Подсолнухи</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      margin: 20px;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 650px; 
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .logo img {
+      max-width: 250px; 
+      height: auto;
+      margin-bottom: 15px; /* чуть меньше */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .discount-block {
+      background-color: #f5a623;
+      color: #000;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 20px 15px; /* уменьшили внутренние отступы */
+      text-align: center;
+      margin-bottom: 10px;
+      box-shadow: 0 3px 6px rgba(245, 166, 35, 0.3);
+      user-select: none;
+    }
+
+    .discount-block .amount {
+      font-size: 36px; /* уменьшили с 48px */
+      margin-bottom: 8px;
+    }
+
+    .discount-block .subtitle {
+      font-size: 16px; /* уменьшили с 18px */
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      margin-bottom: 30px;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
+
+    ol {
+      max-width: 550px;
+      margin: 0 auto 30px auto;
+      padding-left: 20px;
+      font-size: 16px; 
+      color: #222;
+    }
+
+    ol li {
+      margin-bottom: 12px;
+    }
+
+    .map-container {
+      max-width: 550px;
+      height: 350px; 
+      margin: 0 auto 15px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    .map-container img {
+      width: 100%;
+      height: 100%; /* чтобы картинка занимала всю высоту контейнера */
+      object-fit: cover; /* подгонка изображения */
+    }
+
+    .map-caption {
+      text-align: center;
+
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+      margin-top: 8px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 640px) {
+      .discount-block .amount {
+        font-size: 28px; /* уменьшили размер на мобильных */
+      }
+
+      ol {
+        font-size: 12px; /* уменьшили размер на мобильных */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Логотип -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Логотип Подсолнухи" />
+    </div>
+
+    <!-- Заголовок -->
+    <h1>ВАША ПЕРСОНАЛЬНАЯ СКИДКА</h1>
+
+    <!-- Жёлтый блок -->
+    <div class="discount-block">
+      <div class="amount">150 000 ₽</div>
+      <div class="subtitle">на покупку земельного участка*</div>
+    </div>
+
+    <!-- Пояснения -->
+    <div class="note">
+      • Скидка действует при покупке земельного участка до 31.12.2026 года.<br />
+      Ваучер можно использовать только один раз.
+    </div>
+
+    <hr />
+
+    <!-- Список -->
+    <ol>
+      <li>При старте продаж наш менеджер свяжется с вами для уточнения деталей и организации встречи.</li>
+      <li>На встрече предъявите ваучер нашему менеджеру.</li>
+      <li>После проверки и подтверждения ваучера сумма скидки в размере 150 000 рублей будет вычтена из стоимости выбранного вами земельного участка.</li>
+    </ol>
+
+    <!-- Информация и изображение вместо карты -->
+    <div class="info-map">
+      <div class="info-text">
+        <p>Дачный поселок расположен в Мичуринском сельсовете Пензенской области, к юго-западу от г. Пенза.</p>
+        <p>Доступ в поселок осуществляется по федеральной автомобильной дороге Р-208 «Пенза-Тамбов».</p>
+        <p>Время в пути от центра города составляет не более 20-ти минут.</p>
+      </div>
+
+      <!-- Заменяем карту на изображение -->
+      <div class="map-container">
+        <img src="images/voucher-map.jpg" alt="Расположение дачного поселка" />
+      </div>
+      <p class="map-caption">Расположение дачного поселка на карте</p>
+    </div>
+  </div>
+</body>
+</html>
